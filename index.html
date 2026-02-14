@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="uz">
+<html lang="ru">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Maxfiylik siyosati — Bilimchi</title>
+  <title>Политика конфиденциальности — Bilimchi</title>
   <style>
     body {
       font-family: 'Inter', sans-serif;
@@ -55,40 +55,24 @@
 </head>
 <body>
   <header>
-    <h1>Maxfiylik siyosati</h1>
+    <h1 id="title">Политика конфиденциальности</h1>
   </header>
 
   <main>
-    <p>
-      Biz foydalanuvchilarning ishonchini qadrlaymiz va shaxsiy ma’lumotlarning himoyasiga mas’uliyat bilan yondashamiz.
+    <p id="p1">
+      Мы обрабатываем только те персональные данные, которые репетиторы добровольно предоставляют через Telegram-бот для публикации своих профилей в приложении Bilimchi.
     </p>
 
-    <p>
-      Bilimchi ilovasida repetitorlar Telegram-bot orqali ixtiyoriy ravishda taqdim etgan shaxsiy ma’lumotlar
-      (ism, profil rasmi, fanlar, tajriba, narx va shahar) ommaviy profil sifatida ilovada ko‘rsatiladi.
+    <p id="p2">
+      Приложение не требует регистрации пользователей и не запрашивает персональные данные учеников. Профили репетиторов отображаются публично с их согласия.
     </p>
 
-    <p>
-      Ilova foydalanuvchilar (o‘quvchilar) uchun ro‘yxatdan o‘tishni talab qilmaydi va ularning shaxsiy ma’lumotlarini yig‘maydi.
+    <p id="p3">
+      Предоставленные данные используются исключительно для работы сервиса, отображения анкет репетиторов и улучшения качества платформы.
     </p>
 
-    <p>
-      Taqdim etilgan ma’lumotlar faqat xizmatni ta’minlash, repetitorlarni topishda qulaylik yaratish
-      va platforma sifatini yaxshilash maqsadida ishlatiladi.
-    </p>
-
-    <p>
-      Repetitorlar o‘z profillarini tahrirlash yoki o‘chirish bo‘yicha murojaat qilish huquqiga ega.
-      Profilni o‘chirish bo‘yicha so‘rovlar aloqa manzili orqali qabul qilinadi.
-    </p>
-
-    <p>
-      Shuningdek, ilovada uchinchi tomon xizmatlari (masalan, Telegram) orqali amalga oshiriladigan aloqa
-      mazmuni uchun Bilimchi javobgar emas.
-    </p>
-
-    <p>
-      Maxfiylik siyosati bo‘yicha savollar yoki profilni o‘chirish bo‘yicha murojaatlar uchun:
+    <p id="p4">
+      По вопросам конфиденциальности или для запроса удаления профиля вы можете связаться с нами по почте:
       <a href="mailto:bilimchisupport@yourdomain.com">bilimchisupport@yourdomain.com</a>
     </p>
   </main>
@@ -98,7 +82,27 @@
   </footer>
 
   <div class="logo">
-    <img src="images/logo.jpg" alt="Bilimchi logotipi" />
+    <img src="images/logo.jpg" alt="Bilimchi logo" />
   </div>
+
+  <script>
+    const lang = navigator.language || navigator.userLanguage;
+
+    if (lang && lang.startsWith('uz')) {
+      document.getElementById('title').innerText = 'Maxfiylik siyosati';
+
+      document.getElementById('p1').innerText =
+        'Bilimchi ilovasida repetitorlar Telegram-bot orqali ixtiyoriy ravishda taqdim etgan shaxsiy ma’lumotlar qayta ishlanadi va ommaviy profil sifatida ko‘rsatiladi.';
+
+      document.getElementById('p2').innerText =
+        'Ilova foydalanuvchilar (o‘quvchilar) uchun ro‘yxatdan o‘tishni talab qilmaydi va ularning shaxsiy ma’lumotlarini yig‘maydi.';
+
+      document.getElementById('p3').innerText =
+        'Taqdim etilgan ma’lumotlar faqat xizmatni ta’minlash va repetitorlarni topishda qulaylik yaratish uchun ishlatiladi.';
+
+      document.getElementById('p4').innerHTML =
+        'Maxfiylik bo‘yicha savollar yoki profilni o‘chirish uchun: <a href="mailto:bilimchisupport@yourdomain.com">bilimchisupport@yourdomain.com</a>';
+    }
+  </script>
 </body>
 </html>
